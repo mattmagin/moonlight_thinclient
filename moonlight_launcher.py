@@ -17,13 +17,14 @@ def launch_moonlight():
     moonlight_cmd = [
         "moonlight-qt",
         "stream",
-        "-app", APP,
-        "-1080",
-        "-display-mode", "fullscreen",
-        "-input", "keyboardmouse",
+        "--1440",
+        "--bitrate", "40",
+        "--display-mode", "fullscreen",
         "--absolute-mouse",
         "--no-game-optimization",
-        HOST_IP
+        "--performance-overlay",
+        HOST_IP,
+        APP
     ]
 
     try:
